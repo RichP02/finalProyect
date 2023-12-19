@@ -107,8 +107,10 @@ columns = ["Name","Platform","Year","Genre","Publisher","NA_Sales","EU_Sales","J
 
 df_videogames = pd.DataFrame(videogames, columns=columns)
 
-df_videogames.groupby('Year')['Global_Sales'].sum().plot(kind='line')
-plt.title('Ventas globales por año')
-plt.xlabel('Año')
-plt.ylabel('Ventas globales')
+
+platform = df_videogames[df_videogames['Platform'] == 'X360']
+sales = platform[['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']].sum()
+regions = ['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']
+plt.pie(sales, labels=regions, autopct='%1.1f%%')
+plt.title('Ventas por región para la plataforma X360')
 plt.show()
