@@ -65,3 +65,28 @@ body {
 .reference {
     text-decoration: none;
 }
+
+
+.conclusion {
+    margin: auto auto 30px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.conclusion h1 {
+    color: #444;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.conclusion p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
