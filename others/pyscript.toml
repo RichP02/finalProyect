@@ -1,7 +1,8 @@
 packages = [
     "matplotlib",
     "pandas",
-    "numpy"
+    "numpy",
+    "seaborn"
 ]
 plugins = [
     "https://pyscript.net/latest/plugins/python/py_tutor.py"

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 videogames = [
     ["Wii Sports","Wii",2006,"Sports","Nintendo",41.49,29.02,3.77,8.46,82.74],
@@ -111,6 +112,6 @@ df_videogames = pd.DataFrame(videogames, columns=columns)
 platform = df_videogames[df_videogames['Platform'] == 'X360']
 sales = platform[['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']].sum()
 regions = ['NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']
-plt.pie(sales, labels=regions, autopct='%1.1f%%')
+plt.pie(sales, labels=regions, autopct='%1.1f%%', colors=sns.color_palette('Set2'))
 plt.title('Ventas por región para la plataforma X360')
 plt.show()
